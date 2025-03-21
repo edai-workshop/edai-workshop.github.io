@@ -122,10 +122,15 @@
 				});
 
 		// Title Bar.
+		// Get the current HTML of #logo
+		var logoHtml = $('#logo').html();
+
+		// Replace the image filename in the HTML string
+		var updatedLogoHtml = logoHtml.replace('logo_full_date.png', 'logo_full_date_xxs.png');
 			$titleBar = $(
 				'<div id="titleBar">' +
 					'<a href="#header" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
+					'<span class="title">' + updatedLogoHtml + '</span>' +
 				'</div>'
 			)
 				.appendTo($body);
