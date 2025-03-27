@@ -2720,7 +2720,8 @@ input[type="button"]:disabled,
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    background: #8DAEBB;
+    background: rgba(215, 234, 241, 0.9);
+    backdrop-filter: blur(10px); /* 10px blur */
     color: #A2AEBB;
     height: 100%;
     overflow-y: auto;
@@ -2749,12 +2750,12 @@ input[type="button"]:disabled,
 
 #header a:hover {
     color: #E2AB21 !important;
-    background: #e4e4e4;
+    background: rgba(228, 228, 228, 0.9);
 }
 
 #mail a:hover {
     color: #E2AB21 !important;
-    background: #8DAEBB;
+    background: rgba(215, 234, 241, 0.9);
 }
 
 #header > header {
@@ -2815,7 +2816,7 @@ input[type="button"]:disabled,
 }
 
 #header > nav ul li {
-    border-top: solid 1px #8DAEBB;
+    border-top: solid 1px #5d6993;
     display: block;
     padding: 0;
 }
@@ -2826,7 +2827,7 @@ input[type="button"]:disabled,
     -ms-transition: none;
     transition: none;
     border: 0;
-    color: #ffffff !important;
+    color: #2A3D45 !important;
     display: block;
     padding: 0.35em 0;
     text-decoration: none;
@@ -3047,7 +3048,7 @@ input[type="button"]:disabled,
         background: rgba(215, 234, 241, 0.2);
         color: #fff;
         min-width: 320px;
-        backdrop-filter: blur(3px); /* 10px blur */
+        /*backdrop-filter: blur(3px); !* 10px blur *!*/
     }
 
     #titleBar .title {

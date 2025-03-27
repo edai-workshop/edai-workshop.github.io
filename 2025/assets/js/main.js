@@ -162,4 +162,13 @@
         }
     });
 
+    // Adjust blur on scroll
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const blurValue = scrollY > 0 ? Math.min(1 + (scrollY / 100) * 7, 3) : 0;
+        const backgroundOpacity = scrollY > 0 ? 0.8 : 0.2;
+        $titleBar.css('backdrop-filter', `blur(${blurValue}px)`);
+        $titleBar.css('background', `rgba(215, 234, 241, ${backgroundOpacity})`);
+    });
+
 })(jQuery);
