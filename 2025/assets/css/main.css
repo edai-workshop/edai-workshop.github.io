@@ -25,6 +25,7 @@ section, summary, time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    z-index: 2;
 }
 
 article, aside, details, figcaption, figure,
@@ -2066,6 +2067,7 @@ input[type="radio"] + label:before {
     border: 0;
     display: inline-block;
     position: relative;
+    z-index: 1;
 }
 
 .image[data-position] img {
@@ -2219,6 +2221,10 @@ input[type="radio"] + label:before {
 
 .image.main img {
     border-radius: 0;
+}
+
+.banner-container {
+    z-index: 1;
 }
 
 /* List */
@@ -2714,7 +2720,7 @@ input[type="button"]:disabled,
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
-    background: #3F88C5;
+    background: #8DAEBB;
     color: #A2AEBB;
     height: 100%;
     overflow-y: auto;
@@ -2742,7 +2748,13 @@ input[type="button"]:disabled,
 }
 
 #header a:hover {
-    color: #ffffff !important;
+    color: #E2AB21 !important;
+    background: #e4e4e4;
+}
+
+#mail a:hover {
+    color: #E2AB21 !important;
+    background: #8DAEBB;
 }
 
 #header > header {
@@ -2765,7 +2777,7 @@ input[type="button"]:disabled,
 }
 
 #header > header p {
-    color: #d2daf2;
+    color: #2A3D45;
     font-style: italic;
     margin: 1em 0 0 0;
 }
@@ -2786,7 +2798,7 @@ input[type="button"]:disabled,
 }
 
 #header > footer .icons li a {
-    color: #b6bdea;
+    color: #ffffff;
 }
 
 #header > nav {
@@ -2803,7 +2815,7 @@ input[type="button"]:disabled,
 }
 
 #header > nav ul li {
-    border-top: solid 1px #3F88C5;
+    border-top: solid 1px #8DAEBB;
     display: block;
     padding: 0;
 }
@@ -2821,8 +2833,8 @@ input[type="button"]:disabled,
 }
 
 #header > nav ul li a.active {
-    background: #DAD2D8;
-    color: #A8201A !important;
+    background: #ffffff;
+    color: #E2AB21 !important;
 }
 
 #header > nav ul li:first-child {
@@ -3032,9 +3044,10 @@ input[type="button"]:disabled,
         top: 0;
         width: 100%;
         z-index: 10001;
-        background: #011627;
+        background: rgba(215, 234, 241, 0.2);
         color: #fff;
         min-width: 320px;
+        backdrop-filter: blur(3px); /* 10px blur */
     }
 
     #titleBar .title {
@@ -3046,6 +3059,12 @@ input[type="button"]:disabled,
         padding: 0 1em;
         width: 100%;
         text-align: left;
+    }
+
+    #titleBar .small-logo img {
+        height: 44px;
+        /*padding: 0em 0em 0em 0em;*/
+        /*width: 10%;*/
     }
 
     #titleBar .title a {
@@ -3078,7 +3097,7 @@ input[type="button"]:disabled,
     }
 
     #titleBar .toggle:before {
-        background: #3f88c5;
+        background: rgba(215, 234, 241, 0.2);
         color: #ffffff;
         content: '\f0c9';
         display: block;
