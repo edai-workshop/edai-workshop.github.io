@@ -250,6 +250,11 @@ span.text-highlight {
     font-weight: 700;
 }
 
+span.text-highlight > strike {
+    color: #b1aa91;
+    font-weight: 700;
+}
+
 /* Row */
 
 .row {
